@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>なんちゃってパーパスジェネレータ</title>
+    <script src="https://code.createjs.com/easeljs-0.7.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="main.js"></script>
+
+</head>
+    <body>
+        <h1>なんちゃってパーパスジェネレータ</h1>
+        <dl class="table">
+            <dt>画像</dt>
+            <dd><span><img src="base.png" id="preview" width="300"></span><dd>
+            <dd><input type="file" accept="image/*" id="getfile"><dd>
+            <dt>タイトル</dt>
+            <dd><input type="text" name="txt01" id="txt01" placeholder="" /></dd>
+            <dt>セリフ</dt>
+            <dd><textarea name="txt02" id="txt02" rows="4" cols="40">人の心を動かし、&NewLine;価値を創造し、&NewLine;世界のあり方を変える。
+            </textarea></dd>
+        </dl>
+        <div class="btn">
+            <button id="update">画像生成</button>
+            <button id="left">←</button>
+            <button id="up">↑</button>
+            <button id="down">↓</button>
+            <button id="right">→</button>
+            <button id="zoomin">拡大</button>
+            <button id="zoomout">縮小</button>
+            <button id="grayscale">グレースケール</button>
+            <button id="reset">リセット</button>
+            <button id="download">ダウンロード</button>
+        </div>
+
+        <!-- 出力部分 -->
+        <div class="module">
+            <h2>生成結果</h2>
+            <h1 id="alert" style="color: red"></h1>
+            <canvas id="result" width="623" height="842"></canvas>
+        </div>
+    </body>
+</html>
